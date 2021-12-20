@@ -1,5 +1,9 @@
 package hello_world
 
 fun main() {
-    println("Hello world!")
+    val value = 40
+    val name = "Ivan"
+    val resultText = "$name $value"
+
+    println(resultText)
 }
