@@ -14,10 +14,4 @@ fun main() {
     result = (name?.length?:0) + (soname?.length?:0) + (age?.length?:0)
     println(result)
 
-    val b = false
-    if (true){
-        println("True")
-    } else {
-        println("False")
-    }
 }
