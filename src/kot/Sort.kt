@@ -1,18 +1,15 @@
 package kot
 
 fun main() {
-    val sortedArray = getSortedArray(4, 2, 6, 7, 8, 3, 5, 6, 6, 7, 8, 9, 0)
-    println(sortedArray)
+    val array = mutableListOf(4, 2, 6, 7, 8, 3, 5, 6, 6, 7, 8, 9, 0)
+    println(sort(array))
+    println(sort(4,6,7,4,3,4343,5,6,7,89,2,4))
 }
 
-fun getSortedArray(vararg params: Int): ArrayList<List<Int>> {
-    val listNumbers: MutableList<Int> = arrayListOf()
+fun sort(listNumbers: MutableList<Int>): List<Int> {
     var bufferForInt: Int
-    for (param in params) {
-        listNumbers.add(param)
-    }
 
-    for ((firstIndex) in listNumbers.withIndex()) {
+    for (firstIndex in 0 until listNumbers.size) {
         for (secondIndex in listNumbers.size - 1 downTo firstIndex) {
             if (secondIndex == firstIndex) {
                 break
@@ -24,5 +21,8 @@ fun getSortedArray(vararg params: Int): ArrayList<List<Int>> {
         }
     }
 
-    return arrayListOf(listNumbers)
+    return listNumbers
 }
+
+fun sort(array: Array<Int>) = sort(array.toMutableList())
+fun sort(vararg params: Int) = sort(params.toMutableList())
