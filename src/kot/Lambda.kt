@@ -12,7 +12,7 @@ fun main() {
     val printName: (String) -> Unit = { println("Hello $it") }
     printName("Mike")
 
-    val arrayNumbers: (kotlin.Array<Int>) -> Unit = { it.sort() }
+    val arrayNumbers: (Array<Int>) -> Unit = { it.sort() }
     val testArray = arrayOf(4, 6, 2, 3, 8, 9, 7, 6, 5, 0, 3)
     arrayNumbers(testArray)
     println(testArray.contentToString())
