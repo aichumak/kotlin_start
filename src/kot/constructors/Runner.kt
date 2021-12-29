@@ -5,5 +5,4 @@ fun main() {
     val book1 = Book("Java")
     println(book.toString())
     println(book1.toString())
-
 }
