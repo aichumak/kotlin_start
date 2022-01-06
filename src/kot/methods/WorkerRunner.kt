@@ -6,7 +6,7 @@ fun main() {
     worker1.printInfo()
 }
 
-inline fun Worker.printInfo(): Unit{
+fun Worker.printInfo() {
     println(name)
     println(position)
     println(employmentYear)
